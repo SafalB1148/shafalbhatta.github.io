@@ -1,61 +1,118 @@
-/* Reset some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
 body, h1, p, a {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #e0f7ff;
+  text-align: center;
+  padding: 40px;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(20, 20, 30, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  animation: floatIn 1s ease-out;
+}
+
+/* Avatar */
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 15px #00ffff;
+  transition: transform 0.4s ease;
+}
+.avatar:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 10px;
+  color: #00ffff;
+  font-size: 2.7rem;
+  letter-spacing: 1px;
+  animation: glow 2s infinite alternate;
+}
+
+/* Description */
+p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #b0e0ff;
+}
+
+/* Social links */
+.links a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 22px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #001f3f;
+  background: #00ffff;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.links a:hover {
+  background: #00aaff;
+  color: white;
+  box-shadow: 0 0 10px #00ffff;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* Animations */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #00ffff;
   }
-  
-  /* Set background and text styling */
-  body {
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-    padding: 40px;
+  to {
+    text-shadow: 0 0 20px #00ffff;
   }
-  
-  /* Container styling */
-  .container {
-    max-width: 600px;
-    margin: auto;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes floatIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  
-  /* Profile image */
-  .avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  /* Name heading */
-  h1 {
-    margin-bottom: 10px;
-  }
-  
-  /* Links styling */
-  .links a {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    background-color: #0077cc;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .links a:hover {
-    background-color: #005fa3;
-  }
-  
-  /* Footer */
-  footer {
-    margin-top: 30px;
-    font-size: 0.9em;
-    color: #777;
-  }
+}
+/* Light Theme */
+.light-theme {
+  background: linear-gradient(to right, #fff, #f1f1f1);
+  color: #333;
+}
+
+/* Dark Theme (existing theme) */
+.dark-theme {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #e0f7ff;
+}
