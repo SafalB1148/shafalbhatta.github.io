@@ -85,15 +85,7 @@ footer {
   color: #aaa;
 }
 
-/* Animations */
-@keyframes glow {
-  from {
-    text-shadow: 0 0 3px #00ffff, 0 0 5px #00ccff;
-  }
-  to {
-    text-shadow: 0 0 8px #00ffff, 0 0 10px #00ccff;
-  }
-}
+
 
 @keyframes floatIn {
   from {
